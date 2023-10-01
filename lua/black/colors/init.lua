@@ -109,3 +109,5 @@ local colors = {
         cursor_line         = active
     },
 }
+
+return colors
