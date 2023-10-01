@@ -3,8 +3,6 @@ local settings               = require("black.util.config").settings;
 local plugins                = require("black.highlights.plugins.init")
 local styles                 = settings.styles
 
--- apply conditional colors
-colors                       = require "black.colors.conditionals"
 
 local m                      = colors.main
 local e                      = colors.editor
