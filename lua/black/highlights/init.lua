@@ -1,7 +1,7 @@
-local colors                 = require "lua.black.colors.init"
-local settings               = require "lua.black.util.config".settings
-local plugins                = require "lua.black.highlights.plugins.init"
-local styles                 = settings.styles
+local colors                 = require("lua.black.colors.init");
+local settings               = require("lua.black.util.config").settings;
+local plugins                = require("lua.black.highlights.plugins.init");
+local styles                 = settings.styles;
 
 -- apply conditional colors
 colors                       = require "lua.black.colors.conditionals"

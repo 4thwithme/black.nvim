@@ -21,7 +21,6 @@ local center_prompt = {
 ---@param prompt_bufnr number buffer number of the prompt
 local function enter(prompt_bufnr)
 	local selected = action_state.get_selected_entry()
-	vim.g.black_style = selected[1]
 	vim.cmd "colorscheme black"
 	actions.close(prompt_bufnr)
 end

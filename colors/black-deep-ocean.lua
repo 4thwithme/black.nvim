@@ -6,6 +6,5 @@ package.loaded["black.functions"]           = nil
 package.loaded["black.highlights"]          = nil
 package.loaded["black.highlights.plugins"]  = nil
 
-vim.g.black_style = "deep ocean"
-
 require "lua.black.util.init".load()
+require "lua.black.colors.init".load()

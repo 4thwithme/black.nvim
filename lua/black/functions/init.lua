@@ -14,25 +14,9 @@ local set_lualine = function()
     end
 end
 
----switch to a given style
----@param style string name of the style to switch to
-M.change_style = function(style)
+M.change_style = function()
     set_lualine()
-    vim.g.black_style = style
-    -- print("Black style: ", style)
     vim.cmd "colorscheme black"
-end
-
----toggle between styles
-M.toggle_style = function()
-    if vim.g.black_style_iterator == nil then
-        vim.g.black_style_iterator = 0
-    end
-    local styles = {
-        "deep ocean"
-    }
-    vim.g.black_style_iterator = (vim.g.black_style_iterator % (#styles)) + 1
-    M.change_style(styles[vim.g.black_style_iterator])
 end
 
 ---toggle the end-of-buffer lines (~)
@@ -48,9 +32,5 @@ M.toggle_eob = function()
     end
 end
 
----use telescope to change the style
-M.find_style = function()
-    require("black.functions.telescope_styles").find()
-end
 
 return M

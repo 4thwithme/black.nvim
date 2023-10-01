@@ -1,5 +1,5 @@
-local colors   = require "black.colors"
-local settings = require "black.util.config".settings
+local colors   = require("black.colors");
+local settings = require("black.util.config").settings;
 local disabled = settings.disable
 
 -- disable borders
