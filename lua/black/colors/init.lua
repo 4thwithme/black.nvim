@@ -9,7 +9,7 @@ local paleblue     = "#89aeff"
 local cyan         = "#1b72ac"
 local purple       = "#d7ac5b"
 local orange       = "#e97855"
-local number       = "#2a2ac5"
+local numberVal    = "#2a2ac5"
 local pink         = "#5da3e5"
 local darkred      = "#DC6068"
 local darkgreen    = "#ABCF76"
@@ -25,7 +25,7 @@ local title        = "#EEFFFF"
 local bg           = "#000000"
 local bg_alt       = "#090B10"
 local fg           = "#5da3e5"
-local fg_dark      = "#CFC3C2"
+local fg_dark      = "#dfd6d6"
 local selection    = "#1F2233"
 local contrast     = "#090B10"
 local active       = "#1A1C25"
@@ -59,6 +59,7 @@ local colors = {
         darkpurple = darkpurple,
         darkorange = darkorange,
         punc       = punc,
+        numberVal  = numberVal,
     },
 
     ---colors applied to the editor
@@ -90,10 +91,9 @@ local colors = {
 
     syntax = {
         variable = darkyellow,
-        field    = '#B0BEC5',
+        field    = '#dfd6d6',
         keyword  = cyan,
         value    = orange,
-        number   = number,
         operator = cyan,
         fn       = blue,
         string   = green,

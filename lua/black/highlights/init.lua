@@ -31,9 +31,9 @@ M.main_highlights.syntax     = function()
 		Structure      = { fg = s.type, bold = true },
 		SpecialComment = { link = "Comment" },       -- special things inside a comment
 		Constant       = { fg = m.yellow, bold = true },
-		Number         = { fg = s.value, bold = true },
+		Number         = { fg = m.numberVal, bold = true },
 		Character      = { link = "Number" },
-		Boolean        = { link = "Number", bold = true },
+		Boolean        = { link = s.value, bold = true },
 		Float          = { link = "Number", bold = true },
 		Statement      = { fg = m.cyan, bold = true },
 		Label          = { fg = s.keyword, bold = true }, -- case, default, etc.
