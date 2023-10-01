@@ -1,92 +1,113 @@
-local high_visibility = require "lua.black.util.config".settings.high_visibility
+local white        = "#EEFFFF"
+local gray         = "#717CB4"
+local black        = "#000000"
+local red          = "#a973cd"
+local green        = "#a3ce63"
+local yellow       = "#FFCB6B"
+local blue         = "#8989ce"
+local paleblue     = "#B0C9FF"
+local cyan         = "#16637e"
+local purple       = "#FFCB6B"
+local orange       = "#e68a6f"
+local pink         = "#5da3e5"
+local darkred      = "#DC6068"
+local darkgreen    = "#ABCF76"
+local darkyellow   = "#c3ae64"
+local darkblue     = "#6E98EB"
+local darkcyan     = "#71C6E7"
+local darkpurple   = "#B480D6"
+local darkorange   = "#E2795B"
+local punc         = "#a973cd"
+local link         = "#80CBC4"
+local cursor       = "#FFCC00"
+local title        = "#EEFFFF"
+local bg           = "#0F111A"
+local bg_alt       = "#090B10"
+local fg           = "#5da3e5"
+local fg_dark      = "#8F93A2"
+local selection    = "#1F2233"
+local contrast     = "#090B10"
+local active       = "#1A1C25"
+local border       = "#232637"
+local line_numbers = "#3B3F51"
+local highlight    = "#1F2233"
+local disabled     = "#464B5D"
+local accent       = "#84FFFF"
+local comments     = "#464B5D"
 
----colors table
 local colors = {
     ---main colors
     main = {
-        white      = "#EEFFFF",
-        gray       = "#717CB4",
-        black      = "#000000",
-        red        = "#a973cd",
-        green      = "#a3ce63", --
-        yellow     = "#FFCB6B",
-        blue       = "#8989ce", --
-        paleblue   = "#B0C9FF",
-        cyan       = "#16637e", --
-        purple     = "#FFCB6B", --
-        orange     = "#e68a6f", --
-        pink       = "#5da3e5", --
-
-        darkred    = "#DC6068",
-        darkgreen  = "#ABCF76",
-        darkyellow = "#c3ae64", --
-        darkblue   = "#6E98EB",
-        darkcyan   = "#71C6E7",
-        darkpurple = "#B480D6",
-        darkorange = "#E2795B",
-        punc       = "#a973cd",
+        white      = white,
+        gray       = gray,
+        black      = black,
+        red        = red,
+        green      = green,
+        yellow     = yellow,
+        blue       = blue,
+        paleblue   = paleblue,
+        cyan       = cyan,
+        purple     = purple,
+        orange     = orange,
+        pink       = pink,
+        darkred    = darkred,
+        darkgreen  = darkgreen,
+        darkyellow = darkyellow,
+        darkblue   = darkblue,
+        darkcyan   = darkcyan,
+        darkpurple = darkpurple,
+        darkorange = darkorange,
+        punc       = punc,
     },
 
     ---colors applied to the editor
     editor = {
-        link   = "#80CBC4",
-        cursor = "#FFCC00",
-        title  = "#EEFFFF",
+        cursor       = cursor,
+        link         = link,
+        title        = title,
+        bg           = bg,
+        bg_alt       = bg_alt,
+        fg           = fg,
+        fg_dark      = fg_dark,
+        selection    = selection,
+        contrast     = contrast,
+        active       = active,
+        border       = border,
+        line_numbers = line_numbers,
+        highlight    = highlight,
+        disabled     = disabled,
+        accent       = accent,
+        comments     = comments,
     },
 
     lsp = {
-        error = "#FF5370",
+        error   = "#FF5370",
+        warning = yellow,
+        info    = paleblue,
+        hint    = purple
     },
 
-    syntax = {},
-    git = {},
-    backgrounds = {},
+    syntax = {
+        variable = darkyellow,
+        field    = '#B0BEC5',
+        keyword  = cyan,
+        value    = orange,
+        operator = cyan,
+        fn       = blue,
+        string   = green,
+        type     = purple
+    },
+    git = {
+        added    = green,
+        removed  = red,
+        modified = blue
+    },
+    backgrounds = {
+        sidebars            = bg,
+        floating_windows    = bg,
+        non_current_windows = bg,
+        cursor_line         = active
+    },
 }
-
--- Style specific colors
-
-if vim.g.black_style == "deep ocean" then
-    -- Deep Ocean theme style
-
-    colors.editor.bg           = "#0F111A" --
-    colors.editor.bg_alt       = "#090B10"
-    colors.editor.fg           = "#5da3e5"
-    colors.editor.fg_dark      = "#8F93A2"
-    colors.editor.selection    = "#1F2233"
-    colors.editor.contrast     = "#090B10"
-    colors.editor.active       = "#1A1C25"
-    colors.editor.border       = "#232637"
-    colors.editor.line_numbers = "#3B3F51"
-    colors.editor.highlight    = "#1F2233"
-    colors.editor.disabled     = "#464B5D"
-    colors.editor.accent       = "#84FFFF"
-    colors.syntax.comments     = "#464B5D"
-end
-
----syntax colors
-colors.syntax.variable = colors.main.darkyellow --
-colors.syntax.field    = '#B0BEC5' --
-colors.syntax.keyword  = colors.main.cyan --
-colors.syntax.value    = colors.main.orange --
-colors.syntax.operator = colors.main.cyan --
-colors.syntax.fn       = colors.main.blue --
-colors.syntax.string   = colors.main.green --
-colors.syntax.type     = colors.main.purple --
-
----git colors
-colors.git.added    = colors.main.green
-colors.git.removed  = colors.main.red
-colors.git.modified = colors.main.blue
-
----lsp colors
-colors.lsp.warning = colors.main.yellow
-colors.lsp.info    = colors.main.paleblue
-colors.lsp.hint    = colors.main.purple
-
----contrasted backgrounds
-colors.backgrounds.sidebars            = colors.editor.bg
-colors.backgrounds.floating_windows    = colors.editor.bg
-colors.backgrounds.non_current_windows = colors.editor.bg
-colors.backgrounds.cursor_line         = colors.editor.active
 
 return colors
