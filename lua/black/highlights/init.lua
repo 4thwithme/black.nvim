@@ -13,13 +13,10 @@ local b                      = colors.backgrounds
 
 local M                      = {}
 
----main highlight functions
 M.main_highlights            = {}
 
----async highlight functions
 M.async_highlights           = {}
 
----regular Vim syntax highlights
 M.main_highlights.syntax     = function()
 	local syntax_hls        = {
 		Identifier     = { fg = e.fg },
