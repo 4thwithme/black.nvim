@@ -1,5 +1,6 @@
 local colors                 = require("lua.black.colors.init");
-local settings               = require("lua.black.util.config").settings;
+local config                 = require("lua.black.util.config")
+local settings               = config.settings
 local plugins                = require("lua.black.highlights.plugins.init");
 local styles                 = settings.styles;
 

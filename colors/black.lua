@@ -1,9 +1,9 @@
-package.loaded["black"]                     = nil
-package.loaded["black.util"]                = nil
-package.loaded["black.colors"]              = nil
-package.loaded["black.colors.conditionals"] = nil
-package.loaded["black.functions"]           = nil
-package.loaded["black.highlights"]          = nil
-package.loaded["black.highlights.plugins"]  = nil
+package.loaded["lua.black"]                     = nil
+package.loaded["lua.black.util"]                = nil
+package.loaded["lua.black.colors"]              = nil
+package.loaded["lua.black.colors.conditionals"] = nil
+package.loaded["lua.black.functions"]           = nil
+package.loaded["lua.black.highlights"]          = nil
+package.loaded["lua.black.highlights.plugins"]  = nil
 
 require "black.util".load()
