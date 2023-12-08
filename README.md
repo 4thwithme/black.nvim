@@ -1,5 +1,7 @@
 # Black color theme for vim code editor.
 
+### Press the :star: if you like it :)
+
 ## Description
 
 Cool dark color theme for vim code editor. 
