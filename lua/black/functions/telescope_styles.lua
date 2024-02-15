@@ -33,12 +33,8 @@ local opts = {
 	prompt_title = "Black",
 	results_title = "styles",
 	sorter = sorters.get_fzy_sorter({}),
-	borderchars = {
-		{ '─', '│', '─', '│', '┌', '┐', '┘', '└'},
-		prompt = {"─", "│", " ", "│", '┌', '┐', "│", "│"},
-		results = {"─", "│", "─", "│", "├", "┤", "┘", "└"},
-		preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
-	},
+	border = 'single',
+	borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 	attach_mappings = function (_, map)
 		map("i", "<CR>", enter)
 		map("n", "<CR>", enter)
@@ -53,4 +49,3 @@ M.find = function ()
 end
 
 return M
-
